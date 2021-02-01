@@ -1,0 +1,26 @@
+% Finding an edge with Matlab's ready edge function
+
+clc;clear;close all;
+edge1=imread('C:\Users\dfsfs\Desktop\Python\minions.jpg');
+imshow(edge1);
+changedge=rgb2gray(edge1);
+filter1=edge(changedge,'canny');
+filter2=edge(changedge,'roberts');
+filter3=edge(changedge,'sobel');
+
+subplot(2,2,1);
+imshow(filter1);
+title('CannyFilter');
+
+subplot(2,2,2);
+imshow(filter2);
+title('RobertsFilter');
+
+subplot(2,2,3);
+imshow(filter3);
+title('SobelFilter');
+
+subplot(2,2,4);
+imshow(edge1);
+title('OriginalPic');
+
